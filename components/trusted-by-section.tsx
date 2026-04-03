@@ -4,10 +4,13 @@ import Image from "next/image"
 
 const logos = [
   { name: "Bal Batika International School", src: "/marquee/balbatika.png" },
+  { name: "RVM Nepal", src: "/marquee/rvm.png" },
+  { name: "ATS", src: "/marquee/ats.png" },
+  { name: "KLogo", src: "/marquee/klogo.png" },
   { name: "Bal Batika International School", src: "/marquee/balbatika.png" },
-  { name: "Bal Batika International School", src: "/marquee/balbatika.png" },
-  { name: "Bal Batika International School", src: "/marquee/balbatika.png" },
-  { name: "Bal Batika International School", src: "/marquee/balbatika.png" },
+  { name: "RVM Nepal", src: "/marquee/rvm.png" },
+  { name: "ATS", src: "/marquee/ats.png" },
+  { name: "KLogo", src: "/marquee/klogo.png" },
 ]
 
 const marqueeLogos = [...logos, ...logos]

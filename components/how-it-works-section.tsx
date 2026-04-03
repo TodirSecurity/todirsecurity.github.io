@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 
 const useCases = [
@@ -27,7 +28,7 @@ const useCases = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="relative mb-8 mt-8 lg:mt-12">
+    <section className="relative mb-8 mt-8 lg:mt-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="mb-4 text-sm font-medium text-primary/80">Why Companies Trust Todir</p>
@@ -68,13 +69,13 @@ export function HowItWorksSection() {
           </div>
 
           <div className="relative border-t border-border/60 px-8 pb-8 pt-6 sm:px-10 lg:px-14 lg:pb-10">
-            <a
-                href="#contact"
+            <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 text-base font-medium text-primary transition-colors hover:text-primary/80"
             >
-              Schedule a walkthrough
+              Schedule a demo
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </div>
 

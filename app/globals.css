@@ -351,9 +351,11 @@
 }
 
 .logo-marquee__image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
   object-fit: contain;
+  transform: scale(1.08);
 }
 
 .dark .logo-marquee__badge {

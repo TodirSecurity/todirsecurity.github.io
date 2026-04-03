@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Shield, Twitter, Linkedin, Github } from "lucide-react"
+import { Shield, Linkedin, Mail } from "lucide-react"
+import Image from "next/image";
 
 const footerLinks = {
   product: [
@@ -23,10 +24,10 @@ const footerLinks = {
     { label: "Status", href: "#status" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#privacy" },
-    { label: "Terms of Service", href: "#terms" },
-    { label: "Cookie Policy", href: "#cookies" },
-    { label: "Compliance", href: "#compliance" },
+    { label: "Privacy Policy", href: "/privacy-policy/" },
+    { label: "Terms of Service", href: "/terms-of-service/" },
+    // { label: "Cookie Policy", href: "#cookies" },
+    // { label: "Compliance", href: "#compliance" },
   ],
 }
 
@@ -38,66 +39,67 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Shield className="h-7 w-7 text-primary" />
+              <Image src="/logo.svg" width={32} height={32} alt="Todir Logo"></Image>
               <span className="text-lg font-bold text-foreground">Todir</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Protection against all cyber attacks: past, present, and future.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
+              <Link
+                  href="mailto:todirsecuritysolutions@gmail.com"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="Email Todir"
+              >
+                <Mail className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
+              <Link href="https://linkedin.com" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
-                <Github className="h-5 w-5" />
               </Link>
             </div>
           </div>
 
           {/* Links */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Product</h3>
-            <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/*<div>*/}
+          {/*  <h3 className="font-semibold text-foreground mb-4">Product</h3>*/}
+          {/*  <ul className="space-y-3">*/}
+          {/*    {footerLinks.product.map((link) => (*/}
+          {/*      <li key={link.label}>*/}
+          {/*        <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">*/}
+          {/*          {link.label}*/}
+          {/*        </Link>*/}
+          {/*      </li>*/}
+          {/*    ))}*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
 
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Company</h3>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/*<div>*/}
+          {/*  <h3 className="font-semibold text-foreground mb-4">Company</h3>*/}
+          {/*  <ul className="space-y-3">*/}
+          {/*    {footerLinks.company.map((link) => (*/}
+          {/*      <li key={link.label}>*/}
+          {/*        <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">*/}
+          {/*          {link.label}*/}
+          {/*        </Link>*/}
+          {/*      </li>*/}
+          {/*    ))}*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
 
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Resources</h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/*<div>*/}
+          {/*  <h3 className="font-semibold text-foreground mb-4">Resources</h3>*/}
+          {/*  <ul className="space-y-3">*/}
+          {/*    {footerLinks.resources.map((link) => (*/}
+          {/*      <li key={link.label}>*/}
+          {/*        <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">*/}
+          {/*          {link.label}*/}
+          {/*        </Link>*/}
+          {/*      </li>*/}
+          {/*    ))}*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
 
-          <div>
+          <div className="col-span-2 md:col-span-1 lg:col-span-1 lg:col-start-5 lg:justify-self-end lg:text-right">
             <h3 className="font-semibold text-foreground mb-4">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
@@ -113,7 +115,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Todir Security, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Todir Security LLC. All rights reserved.
           </p>
         </div>
       </div>

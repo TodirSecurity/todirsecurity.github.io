@@ -1,11 +1,12 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section id="contact" className="relative py-16 lg:py-24 overflow-hidden">
+    <section className="relative py-16 lg:py-24 overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[600px] h-[400px] bg-primary/10 rounded-full blur-3xl" />
@@ -22,12 +23,11 @@ export function CTASection() {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-md text-base px-8 py-6">
-              Schedule a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-secondary text-base px-8 py-6">
-              Contact Sales
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-md text-base px-8 py-6">
+              <Link href="/contact">
+                Start your free trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
           

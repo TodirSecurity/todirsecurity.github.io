@@ -9,14 +9,14 @@ const steps = [
     icon: Database,
     title: "Ingest",
     description:
-      "Collect and normalize data from endpoints, networks, and cloud environments in real-time. Our agents deploy silently without impacting system performance.",
+      "Collect and normalize data from endpoints in real-time, deploying silently without impacting system performance.",
   },
   {
     step: "02",
     icon: Cpu,
     title: "Analyze",
     description:
-      "Process billions of events through our proprietary neural network. Multi-layer analysis examines behavior, signatures, and contextual patterns simultaneously.",
+      "Process billions of events through our AI detection model that examines behavior, signatures, and contextual patterns all at once.",
   },
   {
     step: "03",
@@ -29,7 +29,7 @@ const steps = [
 
 export function DetectionFlowSection() {
   return (
-    <section className="relative py-16 lg:py-24">
+    <section id="how-it-works" className="relative py-16 scroll-mt-28 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <p className="mb-4 text-sm font-medium text-primary/80">How It Works</p>
@@ -49,7 +49,7 @@ export function DetectionFlowSection() {
                     <span className="text-xs font-mono text-primary">{step.step}</span>
                   </div>
 
-                  <Image src="Aspect-ratio-16x9.svg.png" width={320} height={180} alt={step.step} />
+                  {/*<Image src="Aspect-ratio-16x9.svg.png" width={320} height={180} alt={step.step} />*/}
 
                   <h3 className="mb-3 text-2xl font-bold text-foreground">{step.title}</h3>
                   <p className="leading-relaxed text-muted-foreground">{step.description}</p>

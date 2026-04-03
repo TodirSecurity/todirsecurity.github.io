@@ -10,10 +10,10 @@ import Image from "next/image";
 {/*TODO: Re-implement sign in*/}
 
 const navLinks = [
-  { href: "#zero-day-detection", label: "Technology" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#results", label: "Results" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#zero-day-detection", label: "Technology" },
+  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/#results", label: "Results" },
+  { href: "/contact", label: "Contact" },
 ]
 
 export function Navbar() {
@@ -39,7 +39,7 @@ export function Navbar() {
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="relative">
-              <Image src="logo.svg" width={32} height={32} alt="Todir Logo"></Image>
+              <Image src="/logo.svg" width={32} height={32} alt="Todir Logo"></Image>
               <div className="absolute inset-0 blur-lg bg-primary/30 group-hover:bg-primary/50 transition-colors" />
             </div>
             <span className="text-xl font-bold tracking-tight text-foreground">Todir</span>
@@ -63,8 +63,8 @@ export function Navbar() {
             {/*<Button variant="ghost" className="text-muted-foreground hover:text-foreground">*/}
             {/*  Sign In*/}
             {/*</Button>*/}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-sm">
-              Request Demo
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 glow-sm">
+              <Link href="/contact">Get Access</Link>
             </Button>
           </div>
 
@@ -96,8 +96,10 @@ export function Navbar() {
                 {/*<Button variant="ghost" className="justify-start">*/}
                 {/*  Sign In*/}
                 {/*</Button>*/}
-                <Button className="bg-primary text-primary-foreground">
-                  Request Demo
+                <Button asChild className="bg-primary text-primary-foreground">
+                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    Get Access
+                  </Link>
                 </Button>
               </div>
             </div>
