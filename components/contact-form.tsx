@@ -67,7 +67,7 @@ export function ContactForm() {
         <div className="rounded-2xl border border-primary/20 bg-primary/8 px-5 py-6">
           <p className="text-lg font-semibold text-foreground">Request sent</p>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            The Todir team has received your details will follow up by email!
+            The Todir team has received your details and will follow up by email soon!
           </p>
         </div>
       ) : (
